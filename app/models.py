@@ -276,7 +276,7 @@ class Monkey(UserMixin, db.Model):
     def to_json(self):
         json_monkey = {
             'url': url_for('api.get_monkey', id=self.id, _external=True),
-            'monkeynamename': self.monkeyname
+            'monkeyname': self.monkeyname
         }
         return json_monkey
     
